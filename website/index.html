@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello World</title>
+    <title>Our First Web Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/favicon.png">
 </head>
+
 <body>
-    <h1>Hello World</h1>
+    <header>
+        <h1 id="page-title">Bevan, John</h1>
+        <h2>Welcome to IS445 Homework 1</h2>
+        <img src="images/headshot.png" alt="Picture of Me">
+    </header>
+    <main>
+        <div id="section-l">
+            <div>
+                <p class="section-head">About Me</p>
+                <p class="p-head">Education</p>
+                <p>2018, Bachelor of IS, CSULB</p>
+                <p class="p-head">Skills</p>
+                <ol>
+                    <li>Web Programming: node.js, HTML, CSS, JavaScript</li>
+                    <li>Python</li>
+                </ol>
+                <p class="p-head">Expectation of this course</p>
+                <p class="block-text">I’d like you to cover the jQuery and best practices of Web design. More examples on CSS are welcome. (Please change this to what you want to learn from this class.</p>
+            </div>
+        </div>
+        <div id="section-r">
+            <div id="form-border">
+                <p class="section-head">Contact Me</p>
+                <form action="/my-handling-form-page" method="post">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name">
+                    </div>
+                    <div>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_mail">
+                    </div>
+                    <div>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Send your message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
 </body>
+
 </html>
