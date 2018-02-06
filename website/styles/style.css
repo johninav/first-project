@@ -34,7 +34,6 @@ main {
 #section-l {
     float: left;
     width: 50%;
-    /*border: solid red;*/
     padding: 0;
     margin: 0;
 }
@@ -74,7 +73,6 @@ div p, div ol{
 #section-r{
     float: right;
     width: 50%;
-    /*border: solid red;*/
     padding: 0;
     margin: 0;
 }
