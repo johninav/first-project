@@ -1,0 +1,134 @@
+/* GENERAL STYLE */
+
+#header-container{
+    padding: 0
+}
+
+#page-head {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+#main-container {
+    margin-top: 130px;
+    margin-bottom: 100px;
+}
+
+.col-8 {
+    background-color: lightgrey;
+}
+
+.jumbotron{
+    background-color: white;
+}
+
+.underline{
+    text-decoration: underline
+}
+
+/* HOME PAGE STYLE */
+
+div.row div{
+    padding: 10px;
+}
+
+div.col-8{
+    border: solid 1px;
+}
+
+#main-footer{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    margin: 0;
+    max-width: 1800px;
+}
+
+#container-text {
+    margin: 0px 20px;
+}
+
+
+/* ABOUT ME STYLING */
+
+#main-section {
+    /* padding: 0 */
+}
+
+#about-myself-section {
+    margin: 10px;
+    padding: 0;
+}
+
+#about-me-header {
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 5px;
+    padding-bottom: 7px;
+    padding-top: 10px;
+    border: solid 1px black;
+    border-bottom: .5px;
+    background-color: white
+}
+
+#about-me-edu {
+    border: solid 1px black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-bottom: .5px;
+    background-color: white
+}
+
+#about-me-skills {
+    border: solid 1px black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    background-color: white
+}
+
+.no-margin{
+    margin: 0;
+}
+
+
+
+/* BOOTSTRAP PAGE STYLE */
+
+#bootstrap-main {
+    display: flex;
+    border: solid black;
+    padding: 3px;
+    justify-content: center;
+    background-color: rgb(54, 122, 54)
+}
+#bootstrap-main p {
+    margin: 0;
+}
+
+
+#bootstrap-section1 {
+    display: flex;
+    border: solid black;
+    padding: 3px;
+    justify-content: center;
+    margin: 5px 0px;
+    min-height: 250px;
+    background-color: rgb(85, 85, 255)
+}
+
+#bootstrap-section2 {
+    display: flex;
+    border: solid black;
+    padding: 3px;
+    justify-content: center;
+    min-height: 350px;
+    background-color: rgb(100, 52, 100)
+}
+
+#right-card {
+    margin-top: 10px
+}
