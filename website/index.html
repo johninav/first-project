@@ -1,114 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bevan's Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
+    <title>Demo Page</title>
 </head>
 
-
-
-
-
-
 <body>
-    <header>
-        <div class="container fixed-top" id="header-container">
-            <div class="container" id="header-container">
-                <h1 id="page-head">IS 455 Homework and Project</h1>
-                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">John Bevan</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                            <li class="nav-item">
-                                <a class="nav-item nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-item nav-link" href="aboutme.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-item nav-link" href="bootstrap.html">Bootstrap</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">Future</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Homework 3</a>
-                                    <a class="dropdown-item" href="#">Homework 4</a>
-                                    <a class="dropdown-item" href="#">Homework 5</a>
-                                    <a class="dropdown-item" href="#">Homework 6</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-item nav-link" href="#">Project</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container" id="main-container">
-            <div class="row">
-                <div class="col-2">
-                    <h4>Left</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos unde asperiores maxime perferendis
-                        voluptatem modi repellendus distinctio quidem dolorum. Fuga tempora eaque, placeat aperiam enim autem
-                        odit ea commodi.</p>
-                </div>
-                <div class="col-8">
-                    <div class="jumbotron">
-                        <h1 class="display-4">Welcome to my site!</h1>
-                        <h2 class="lead">Built around bootstrap 4</h2>
-                        <p class="my-4">Here you can find all my homework and my project</p>
-                    </div>
-                    <p id="container-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia asperiores alias doloribus voluptate
-                        quos sint eaque modi blanditiis non. Nisi corrupti sed delectus aut nesciunt? Dignissimos quae laudantium
-                        sint sequi!</p>
-                </div>
-                <div class="col-2">
-                    <h4>Right</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam distinctio repudiandae sint quidem.
-                        Expedita, suscipit quas in quod consectetur nemo a, quaerat adipisci velit quos architecto delectus
-                        labore doloremque tempora!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container" id="main-footer">
-            <p>1250 Bellflower Boulevard Long Beach, CA 90840 562.985.4111</p>
-        </div>
-    </footer>
+    <h1>JavaScript Homework</h1>
+    <h3>The program output</h3>
+
+    <script>
+        // VARIABLE INPUT AND CHECK
+            // start
+        var start = prompt('Enter a starting number');
+        var test = isNaN(start);
+        while (test) {
+            alert('Invalid input. Enter a number');
+            var start = prompt('Enter a starting number');
+            var test = isNaN(start);
+        }
+        var start = Number(start);
+            // end
+        var end = prompt('Enter an ending number');
+        var test = isNaN(end);
+        while (test) {
+            alert('Invalid input. Enter a number');
+            var end = prompt('Enter an ending number');
+            var test = isNaN(end);
+        }
+        var end = Number(end);
+            // step
+        var step = prompt('Enter a step');
+        var test = isNaN(step);
+
+
+        // STEP DIRECTION AND VALUE CHECK
+        if (start > end){
+            while (test || step <= 0) {
+                alert('Invalid input. Try switching +/- or enter a number not equal to 0');
+                var step = prompt('Enter a step');
+                var test = isNaN(step);
+            }
+        }
+
+        if (start < end) {
+            while (test || step >= 0) {
+                alert('Invalid input. Try switching +/- or enter a number not equal to 0')
+                var step = prompt('Enter a step');
+                var test = isNaN(step);
+            }
+        }
+
+
+        // VARIABLE PRINT
+        document.write('Start: ', start);
+        document.write('<br>End: ', end);
+        document.write('<br>Step: ', step);
+
+        // BUILD ARRAY
+        var output = new Array();
+        var arrayVariable = start;
+        output.push(arrayVariable)
+
+        if (start < end) {
+            while (arrayVariable < end) {
+                var arrayVariable = arrayVariable - step
+                if (arrayVariable <= end){
+                    output.push(arrayVariable)
+                }
+            }
+        }
+
+        if (start > end) {
+            while (arrayVariable > end) {
+                var arrayVariable = arrayVariable - step
+                if (arrayVariable >= end){
+                    output.push(arrayVariable)
+                }
+            }
+        }
+
+
+        // ARRAY SUM
+        var sum = 0;
+        var length = output.length;
+        for (var i = 0; i < length; i++){
+            var sum = sum + output[i];
+        }
+
+        var binaryOutput = new Array();
+        for (var i = 0; i < length; i++){
+            // var binaryVariable = output[i].toBinaryString(int i);
+            binaryOutput.push('0');
+        }
+
+
+
+
+
+
+
+
+        // PRINT RESULT
+        document.write('<br>The generated array is: ', output);
+        document.write('<br>The sum is: ', sum);
+        document.write('<br>The binary of all element values is: ', binaryOutput);
+
+    </script>
 </body>
-
-
-
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 
 </html>
