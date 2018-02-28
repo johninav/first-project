@@ -91,14 +91,13 @@
             var sum = sum + output[i];
         }
 
+
+        // BINARY CONVERSION
         var binaryOutput = new Array();
         for (var i = 0; i < length; i++){
-            // var binaryVariable = output[i].toBinaryString(int i);
-            binaryOutput.push('0');
+            var binaryVariable = (output[i]).toString(2);
+            binaryOutput.push(binaryVariable);
         }
-
-
-
 
 
 
@@ -108,7 +107,6 @@
         document.write('<br>The generated array is: ', output);
         document.write('<br>The sum is: ', sum);
         document.write('<br>The binary of all element values is: ', binaryOutput);
-
     </script>
 </body>
 
