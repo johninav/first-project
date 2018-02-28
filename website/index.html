@@ -15,11 +15,11 @@
     <script>
         // VARIABLE INPUT AND CHECK
             // start
-        var start = prompt('Enter a starting number');
+        var start = prompt('Enter a starting number for an array');
         var test = isNaN(start);
         while (test) {
             alert('Invalid input. Enter a number');
-            var start = prompt('Enter a starting number');
+            var start = prompt('Enter a starting number for an array');
             var test = isNaN(start);
         }
         var start = Number(start);
@@ -40,7 +40,7 @@
         // STEP DIRECTION AND VALUE CHECK
         if (start > end){
             while (test || step <= 0) {
-                alert('Invalid input. Try switching +/- or enter a number not equal to 0');
+                alert('Invalid input. Ensure the number is positive');
                 var step = prompt('Enter a step');
                 var test = isNaN(step);
             }
@@ -48,7 +48,7 @@
 
         if (start < end) {
             while (test || step >= 0) {
-                alert('Invalid input. Try switching +/- or enter a number not equal to 0')
+                alert('Invalid input. Ensure the number is negative')
                 var step = prompt('Enter a step');
                 var test = isNaN(step);
             }
