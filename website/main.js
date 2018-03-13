@@ -1,30 +1,30 @@
-// //XML-HTTP-REQUEST
+//XML-HTTP-REQUEST
 
-// //event funtion
-// function reqListener () {
-//     let requestData = (XMLReq.response);
-//     sortData(requestData)
-// }
+//event funtion
+function reqListener () {
+    let requestData = (XMLReq.response);
+    sortData(requestData)
+}
 
-// //XML request
-// let XMLReq = new XMLHttpRequest();
-// XMLReq.addEventListener("load", reqListener);
-// XMLReq.open("GET", "https://jsonplaceholder.typicode.com/users");
-// XMLReq.responseType = "json";
-// XMLReq.send();
+//XML request
+let XMLReq = new XMLHttpRequest();
+XMLReq.addEventListener("load", reqListener);
+XMLReq.open("GET", "https://jsonplaceholder.typicode.com/users");
+XMLReq.responseType = "json";
+XMLReq.send();
 
-// //pulls elements from JSON into an array
-// function sortData(data){
-//     emails = new Array();
-//     for (var i = 0; i < 10; i++){
-//         emails.push("<br>" + data[i].email)
-//     }
-// //alphabetize
-//     emails.sort()
-// //writes output
-//     document.write("User emails from XMLHttpRequest: <br>")
-//     document.write(emails) 
-// }
+//pulls elements from JSON into an array
+function sortData(data){
+    emails = new Array();
+    for (var i = 0; i < 10; i++){
+        emails.push("<br>" + data[i].email)
+    }
+//alphabetize
+    emails.sort()
+//writes output
+    document.write("User emails from XMLHttpRequest: <br>")
+    document.write(emails) 
+}
 
 
 
