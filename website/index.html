@@ -7,15 +7,107 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo Page</title>
 </head>
-<style>
-
-
-</style>
 
 <body>
-    
+    <h1>JavaScript Homework</h1>
+    <h3>The program output</h3>
 
-    <script src="main.js"></script>
+    <script>
+        // VARIABLE INPUT AND CHECK
+            // start
+        var start = prompt('Enter a starting number for an array');
+        var test = isNaN(start);
+        while (test) {
+            alert('Invalid input. Enter a number');
+            var start = prompt('Enter a starting number for an array');
+            var test = isNaN(start);
+        }
+        var start = Number(start);
+            // end
+        var end = prompt('Enter an ending number');
+        var test = isNaN(end);
+        while (test) {
+            alert('Invalid input. Enter a number');
+            var end = prompt('Enter an ending number');
+            var test = isNaN(end);
+        }
+        var end = Number(end);
+            // step
+        var step = prompt('Enter a step');
+        var test = isNaN(step);
+
+
+        // STEP DIRECTION AND VALUE CHECK
+        if (start > end){
+            while (test || step <= 0) {
+                alert('Invalid input. Ensure the number is positive');
+                var step = prompt('Enter a step');
+                var test = isNaN(step);
+            }
+        }
+
+        if (start < end) {
+            while (test || step >= 0) {
+                alert('Invalid input. Ensure the number is negative')
+                var step = prompt('Enter a step');
+                var test = isNaN(step);
+            }
+        }
+
+
+        // VARIABLE PRINT
+        document.write('Start: ', start);
+        document.write('<br>End: ', end);
+        document.write('<br>Step: ', step);
+
+        // BUILD ARRAY
+        var output = new Array();
+        var arrayVariable = start;
+        output.push(arrayVariable)
+
+        if (start < end) {
+            while (arrayVariable < end) {
+                var arrayVariable = arrayVariable - step
+                if (arrayVariable <= end){
+                    output.push(arrayVariable)
+                }
+            }
+        }
+
+        if (start > end) {
+            while (arrayVariable > end) {
+                var arrayVariable = arrayVariable - step
+                if (arrayVariable >= end){
+                    output.push(arrayVariable)
+                }
+            }
+        }
+
+
+        // ARRAY SUM
+        var sum = 0;
+        var length = output.length;
+        for (var i = 0; i < length; i++){
+            var sum = sum + output[i];
+        }
+
+
+        // BINARY CONVERSION
+        var binaryOutput = new Array();
+        for (var i = 0; i < length; i++){
+            var binaryVariable = (output[i]).toString(2);
+            binaryOutput.push(binaryVariable);
+        }
+
+
+
+
+
+        // PRINT RESULT
+        document.write('<br>The generated array is: ', output);
+        document.write('<br>The sum is: ', sum);
+        document.write('<br>The binary of all element values is: ', binaryOutput);
+    </script>
 </body>
 
 </html>
