@@ -30,26 +30,26 @@ function sortData(data){
 
 
 
-fetch("https://jsonplaceholder.typicode.com/users")
-.then(function(response) {
-    return response.json();
-})
-.then(function(myJson) {
-    fetchSort(myJson);
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(function(response) {
+//     return response.json();
+// })
+// .then(function(myJson) {
+//     fetchSort(myJson);
     
-});
+// });
 
-//pulls elements from JSON into an array
-function fetchSort(data){
-    users = new Array();
-    for (var i = 0; i < 10; i++){
-        users.push("<br>" + data[i].username)
-    }
-//sort by length
-    users.sort(function(a, b){
-    return a.length - b.length;
-    });
-//writes output
-    document.write("<br><br><br>Usernames from fetch request: <br>");
-    document.write(users);
-}
+// //pulls elements from JSON into an array
+// function fetchSort(data){
+//     users = new Array();
+//     for (var i = 0; i < 10; i++){
+//         users.push("<br>" + data[i].username)
+//     }
+// //sort by length
+//     users.sort(function(a, b){
+//     return a.length - b.length;
+//     });
+// //writes output
+//     document.write("<br><br><br>Usernames from fetch request: <br>");
+//     document.write(users);
+// }
