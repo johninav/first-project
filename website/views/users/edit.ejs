@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Edit user</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script type="text/javascript" src="/javascripts/edit_user.js"></script>
+</head>
+
+<header>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Contact Manager</a>
+    <ul class="navbar-nav m-auto">
+      <form class="form-inline">
+        <li class="nav-item navitem">
+          <a class="nav-item nav-link" href="../..">Index</a>
+        </li>
+        <li class="nav-item navitem">
+          <a class="nav-item nav-link" href="../user">New</a>
+        </li>
+      </form>
+  </nav>
+</header>
+
+<body>
+  <div class="container">
+    <h1>Edit User</h1>
+    <div>
+      Name
+      <div>
+        <input class="form-control" type="text" name="name" value="<%= user.name %>" />
+      </div>
+    </div>
+    <div>
+      Email
+      <div>
+        <input class="form-control" type="email" name="email" value="<%= user.email %>" />
+      </div>
+    </div>
+    <div>
+      Phone
+      <div>
+        <input class="form-control" type="number" name="phone" value="<%= user.phone %>" />
+      </div>
+    </div>
+    <div class="buttoncontainer">
+      <td colspan="2">
+        <button id="updateButton" type="button" class="btn btn-sm btn-primary">Update</button>
+      </td>
+    </div>
+  </div>
+</body>
+
+</html>

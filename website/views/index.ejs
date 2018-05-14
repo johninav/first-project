@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact List</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script type="text/javascript" src="../javascripts/delete_user.js"></script>
+</head>
+
+<header>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Contact Manager</a>
+    <ul class="navbar-nav m-auto">
+      <form class="form-inline">
+        <li class="nav-item navitem">
+          <a class="nav-item nav-link disabled" href="">Index</a>
+        </li>
+        <li class="nav-item navitem">
+          <a class="nav-item nav-link" href="users/user/">New</a>
+        </li>
+      </form>
+  </nav>
+</header>
+
+<body>
+  <div class="container maincontainer">
+    <h3>
+      Contact List
+    </h3>
+    <% if(users.length>0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th class="numBox">#</th>
+            <th class="nameBox">Name</th>
+            <th class="emailBox">Email</th>
+            <th class="phoneBox">Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<users.length;i++) { %>
+            <tr>
+              <td>
+                <%=i+1%>
+              </td>
+              <td>
+                <%= users[i].name%>
+              </td>
+              <td>
+                <%= users[i].email%>
+              </td>
+              <td>
+                <%= users[i].phone%>
+              </td>
+              <td>
+                <button type="button" class="btn btn-success btn-sm detailsButton" onclick="window.location.href='/users/userindex/<%= users[i]._id%>'">
+                  Details
+                </button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm editButton" onclick="window.location.href='/users/user/<%= users[i]._id%>'">
+                  Edit
+                </button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-danger btn-sm deleteButton" data-uid="<%= users[i]._id%>">
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div class="jumbotron"><h1>No users found.</h1></div>
+        <% } %>
+  </div>
+</body>
+
+
+</html>

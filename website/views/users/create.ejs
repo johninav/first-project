@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create a User</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script type="text/javascript" src="../../javascripts/create_user.js"></script>
+</head>
+
+<header>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Contact Manager</a>
+    <ul class="navbar-nav m-auto">
+      <form class="form-inline">
+        <li class="nav-item navitem">
+          <a class="nav-item nav-link" href="../..">Index</a>
+        </li>
+        <li class="nav-item navitem">
+          <a class="nav-item nav-link disabled" href="/users/user">New</a>
+        </li>
+      </form>
+  </nav>
+</header>
+
+<body>
+<div class="container">
+  <h1>Create New User</h1>
+      <div>
+        Name:
+        <div>
+          <input class="form-control" type="text" name="name" />
+        </div>
+      </div>
+      <div>
+        Email:
+        <div>
+          <input class="form-control" type="email" name="email" />
+        </div>
+      </div>
+      <div>
+        Phone:
+        <div>
+          <input class="form-control" type="number" name="phone" />
+        </div>
+      </div>
+      <div class="buttoncontainer">
+        <td colspan="2">
+          <button id="createButton" type="button" class="btn btn-success btn-sm">Create User</button>
+        </td>
+      </div>
+  </div>
+</body>
+
+</html>

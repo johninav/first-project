@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navitem {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.numBox {
+  width: 50px;
+}
+
+.nameBox {
+  width: 200px;
+}
+
+.emailBox {
+ width: 250px;
+}
+
+.phoneBox {
+  width: 150px;
+}
+
+.maincontainer {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  background-color: lightgray;
+}
+
+.btn-sm {
+  margin: 1.2px;
+}
+
+.inversecontainer {
+  background-color: rgb(162, 169, 175);
+  padding: 15px;
+}
+
+.buttoncontainer {
+  margin-top: 10px;
+}
