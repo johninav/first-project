@@ -29,7 +29,7 @@ function createUser() {
 
   request.fail(function(jqXHR, textStatus, errorThrown) {
     console.log(jqXHR, textStatus, errorThrown);
-    alert("Invalid input: \n\nEmail must follow username@server.domain pattern \nPhone number must be 10 digits") 
+    alert("Invalid input: \n\nEmail must follow username@server.domain pattern \nPhone number must be 10 digits and cannot begin with 0 or 1") 
   });
 }
 
