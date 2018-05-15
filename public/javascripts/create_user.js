@@ -24,7 +24,8 @@ function createUser() {
 
   request.done(function(data) {
     console.log("creation done", data);
-    document.location.href="/";
+    const idURL = data["_id"];
+    document.location.href="/users/userindex/"+ idURL;
   });
 
   request.fail(function(jqXHR, textStatus, errorThrown) {
