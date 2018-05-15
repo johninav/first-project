@@ -16,7 +16,7 @@ function clickHandler() {
 
 function deleteUser(uid) {
   const request = $.ajax({
-    url: "/users/user/${uid}",
+    url: `/users/user/${uid}`,
     type: "delete",
     success: function(data) {
       console.log("delete done", data);
