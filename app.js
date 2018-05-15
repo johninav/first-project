@@ -38,7 +38,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://johnnav:weakpassword@finalproject-shard-00-00-b5oif.mongodb.net:27017,finalproject-shard-00-01-b5oif.mongodb.net:27017,finalproject-shard-00-02-b5oif.mongodb.net:27017/test?ssl=true&replicaSet=finalProject-shard-0&authSource=admin&retryWrites=false');
 

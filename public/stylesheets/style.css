@@ -7,10 +7,15 @@ a {
   color: #00B7FF;
 }
 
+
+/* NAV BAR */
+
 .navitem {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+/* INDEX TABLE FORMAT */
 
 .numBox {
   width: 50px;
@@ -27,6 +32,8 @@ a {
 .phoneBox {
   width: 150px;
 }
+
+/* MISC PAGE FORMATTING */
 
 .maincontainer {
   margin-top: 10px;
